@@ -13,8 +13,8 @@ def hangman():
             failed = 0
             turns -= 1
             guesses += guess
-            print(f"Good guess! You have {turns} guesses left. {guesses}")
-            print(word_list2)
+            print(f"Good guess! You have {turns} guesses left. Current guesses: {guesses}")
+            # print(word_list2)
 
 
             for index, char in enumerate(word_list):
@@ -31,14 +31,20 @@ def hangman():
         elif guess not in word:
             failed += 1
             turns -= 1
-            guesses += "-"
-            print(f"Wrong! Guess again! You have {turns} guesses left. {guesses}")
+            guesses += guess
+            print(f"Wrong! Guess again! You have {turns} guesses left. Current guesses: {guesses}")
+            print(word_list2)
 
-        if turns == 0:
-            print("You are out of guesses!")
+        if word_list2 == word_list:
+            print("You won the game! \U0001F929")
 
-        if turns != 0 and failed == 0:
-            print("You win!")
+        if turns < 1:
+            print("You are out of guesses! Game over! \U0001F622")
+
+
+
+        # if turns != 0 and failed == 0:
+        #     print("You win!")
 hangman()
 
 
