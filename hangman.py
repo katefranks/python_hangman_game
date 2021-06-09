@@ -53,9 +53,16 @@ hangman()
 #update the correct position in the list to be that guess
 
 
+#IDEAS WHEN REFACTORING:
+# def play():
+    # hangman = 'boolean'
+#   blank = ['_'] * len(hangman)
+
+# elif guessed_word in blank:
+    # print('Sorry you already guessed that letter')
 
 
-
+# word = input('Player1: Please enter a lowercase word: ') *use method to convert to lowercase just incase user does not follow directions!
 
 
 
